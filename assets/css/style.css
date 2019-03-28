@@ -1,0 +1,8 @@
+body {
+	height: 100%;
+	position: relative;
+	color: #000000;
+	font-family: 'Curtive', serif;
+	background: url(../images/DMbackground.jpg) no-repeat center center fixed;
+	background-size: cover;
+}

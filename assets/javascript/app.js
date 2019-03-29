@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$("#start-button").on("click", gameStart.startTimer);
-	console.log(gameStart);
+	
 })
 
 let gameStart = {
@@ -16,9 +16,9 @@ let gameStart = {
 	},
 
 	countdown: function () {
-		gameStart.timeRemaining--;
-		$("#timer").text("Time remaining: " + gameStart.timeRemaining);
-		if (gameStart.timeRemaining === 0) {
+		gameStart.startTime--;
+		$("#timer").text("Time remaining: " + gameStart.startTime);
+		if (gameStart.startTime === 0) {
 			gameStart.stopTimer();
 			$("timer").empty();
 		}
@@ -43,7 +43,7 @@ let gameStart = {
 let trivia = {
 
 	displayQuestions: function () {
-		let divContainer = $("#questions-box");
+		let divContainer = $("#questions");
 		let answerGroup = $(".form-check");
 		divContainer.append('<h2>Answer the following questions:</h2>');
 
